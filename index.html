@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Change By JS</title>
+
+    <style>
+        :root{
+            font-size: 10px;
+        }
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 6rem;
+            text-align: center;
+        }
+        .button-wrapper{
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+
+        }
+        .img-button{
+            padding: 10px 20px;
+            background-color: cadetblue;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2rem;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .img-button:hover{
+            background-color: black;
+
+        }
+        .image-wrapper{
+            display: flex;
+            justify-content: center;
+        }
+        
+    </style>    
+</head>
+<body>
+    <h1>Click Any Button To Show Image!</h1>
+
+    <div class="button-wrapper">
+        <button onclick="document.getElementById('myImage').src='canada.jpg'" class="img-button">Canada</button>
+        <button onclick="document.getElementById('myImage').src='hill.jpg'" class="img-button">Hill</button>
+        <button onclick="document.getElementById('myImage').src='norway.jpg'" class="img-button">Norway</button>
+        <button onclick="document.getElementById('myImage').src='rain.jpg'" class="img-button">Rain</button>
+    </div>
+
+    <br> <br>
+
+    <div class="image-wrapper">
+        <img id="myImage" src="" alt="click a button to show image" width="720px" height="480px" style="object-fit: cover;">
+    </div>
+    
+
+</body>
+</html>
